@@ -1,0 +1,175 @@
+#timer-general{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width : 100%;
+    z-index: -1;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+/* Sets the containers height and width */
+.base-timer-general {
+    position: absolute;
+    aspect-ratio: 1/1;
+    transform: translate(-50%, -50%);
+}
+
+/* Removes SVG styling that would hide the time label */
+.base-timer-general__circle {
+    fill: none;
+    stroke: none;
+}
+
+/* The SVG path that displays the timer's progress */
+.base-timer-general__path-elapsed {
+    stroke: grey;
+}
+
+.base-timer-general__label {
+    position: absolute;
+    height: 100%;
+    width : 100%;
+    /* aspect-ratio: 1/1; */
+    
+    /* Keep the label aligned to the top */
+    top: 0;
+    
+    /* Create a flexible box that centers content vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* Sort of an arbitrary number; adjust to your liking */
+    font-family: sans-serif;
+}
+
+.base-timer-general__path-remaining {
+    /* Just as thick as the original ring */
+    
+  
+    /* Rounds the line endings to create a seamless circle */
+    stroke-linecap: round;
+  
+    /* Makes sure the animation starts at the top of the circle */
+    transform: rotate(90deg);
+    transform-origin: center;
+  
+    /* One second aligns with the speed of the countdown timer */
+    transition: 1s linear all;
+  
+    /* Allows the ring to change color when the color value updates */
+    stroke: currentColor;
+}
+  
+.base-timer-general__svg {
+    /* Flips the svg and makes the animation to move left-to-right */
+    transform: scaleX(-1);
+}
+
+.base-timer-general__path-remaining.green {
+    color: rgb(65, 184, 131);
+}
+
+.base-timer-general__path-remaining.orange {
+    color: orange;
+}
+
+.base-timer-general__path-remaining.red {
+    color: red;
+}
+
+
+
+
+
+/* ANother timer (this is very bad code) */
+
+#timer-exitfs{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width : 100%;
+    z-index: -1;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+/* Sets the containers height and width */
+.base-timer-exitfs {
+    position: absolute;
+    aspect-ratio: 1/1;
+    transform: translate(-50%, -50%);
+}
+
+/* Removes SVG styling that would hide the time label */
+.base-timer-exitfs__circle {
+    fill: none;
+    stroke: none;
+}
+
+/* The SVG path that displays the timer's progress */
+.base-timer-exitfs__path-elapsed {
+    stroke: grey;
+}
+
+.base-timer-exitfs__label {
+    position: absolute;
+    height: 100%;
+    width : 100%;
+    /* aspect-ratio: 1/1; */
+    
+    /* Keep the label aligned to the top */
+    top: 0;
+    
+    /* Create a flexible box that centers content vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* Sort of an arbitrary number; adjust to your liking */
+    font-family: sans-serif;
+}
+
+.base-timer-exitfs__path-remaining {
+    /* Just as thick as the original ring */
+    
+  
+    /* Rounds the line endings to create a seamless circle */
+    stroke-linecap: round;
+  
+    /* Makes sure the animation starts at the top of the circle */
+    transform: rotate(90deg);
+    transform-origin: center;
+  
+    /* One second aligns with the speed of the countdown timer */
+    transition: 1s linear all;
+  
+    /* Allows the ring to change color when the color value updates */
+    stroke: currentColor;
+}
+  
+.base-timer-exitfs__svg {
+    /* Flips the svg and makes the animation to move left-to-right */
+    transform: scaleX(-1);
+}
+
+.base-timer-exitfs__path-remaining.green {
+    color: rgb(65, 184, 131);
+}
+
+.base-timer-exitfs__path-remaining.orange {
+    color: orange;
+}
+
+.base-timer-exitfs__path-remaining.red {
+    color: red;
+}

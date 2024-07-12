@@ -1,0 +1,212 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+   } 
+
+body {
+    background-color: rgba(158, 166, 167, 0.158);
+}
+h1 {
+    font-family: verdana;
+    font-size: 300%;
+    text-align: left;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+h2 {
+    font-family: verdana;
+    font-size: 150%;
+    text-align: left;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+h3 {
+    font-family: verdana;
+    font-size: 150%;
+    text-align: left;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+p {
+    font-family: Arial;
+    font-size: 150%;
+    text-align: left;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+input {
+    font-family: courier;
+    font-size: 20px;
+}
+
+.header_container {
+    background-color: #c3c3ff;
+    border-bottom: 10px solid rgb(110, 165, 243);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}.header_container .title{
+    font-family: verdana;
+    font-size: 200%;
+    display: inline-block;
+    background-color: #c3c3ff;
+    margin-left: 15%;
+}.header_container .button_container {
+    display: inline-block;
+    height: 100%;
+    margin-left: auto;
+    margin-right: 1%;
+}
+
+.linkbutton{
+    background-color: #4f4feb;
+    height: 100%;
+    padding: 20px;
+    margin-right: 0;
+    text-align: center;
+    cursor: pointer;
+    color:#4f4feb;
+}.linkbutton:hover{
+    background-color: #8080f8;
+    color: rgb(255, 255, 255);
+}
+
+.smolflag{
+    left:0; 
+    top:0;
+    width:50%;
+    height: 40%;
+    margin: 10%;
+}
+
+
+.linkbutton{
+    background-color: #4f4feb;
+    height: 100%;
+    padding: 20px;
+    margin-right:5%;
+    text-align: center;
+    cursor: pointer;
+    color:#4f4feb;
+}.linkbutton:hover{
+    background-color: #8080f8;
+    color: rgb(255, 255, 255);
+}
+
+.main_text_container {
+    background-color: #ffffff;
+    border: 1px solid #595959;
+    min-height: 600px;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-bottom: 5%;
+    margin-top: 1%;
+}
+
+.image_container {
+    background-color: #ffffff;
+    border: 150px solid #595959;
+}
+
+img{
+    -webkit-filter: drop-shadow(5px 5px 5px #666666);
+    filter: drop-shadow(5px 5px 5px #666666);
+}
+
+.svgContainer{
+    background-color: #ffffff;
+    border: 1px solid #595959;
+    border-top: #ffffff00;
+    height: 100%;
+    margin-right: 15%;
+    margin-left: 15%;
+    text-align: center;
+    margin-bottom : 20px;
+}
+
+
+#fullscreen_gauge_container{
+    position:absolute;
+    top :20%;
+    right : 10%;
+    height : 60%;
+    width : 15%;
+    background-color: #ffffff;
+}
+
+
+.leftbox{
+    background-color: #ffffff00;
+    vertical-align: middle;
+    display: inline-block;
+}.rightbox{
+    background-color: #ffffff;
+    vertical-align: middle;
+    display: inline-block;
+} .rightbox #svg1 {
+    margin:5% ;
+} .canvas_container_slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 90vh;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10%;
+    margin-top: 2.5%;
+    margin-bottom: 0%;
+}
+
+#new_mean_text{
+    background-color: #eb4f4f;
+    cursor: pointer;
+    color:#ffffff;
+    padding: 20px;
+    margin: 0px;
+    margin-right:150px;
+}#new_mean_text:hover{
+    background-color: #ffc7c7;
+    color: rgb(255, 255, 255);
+}
+
+.slider_cont{
+    background-color: #ffffff00;
+    display: inline-block;
+}
+
+.canvas_container{
+    background-color: rgb(123, 123, 123);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 90vh;
+}
+
+
+#test{
+    color:#827e7ec5;
+}
+
+#launch_experiment{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin:7%;
+    height:15%;
+    width:40%;
+    font-size: 30px;
+    font-family: system-ui;
+}
+
+/* } .feedback_flash #good_end{
+    background: rgba(0, 255, 0, 0.768);
+}.feedback_flash #bad_end{
+    background: rgba(255, 0, 0, 0.768);
+}.feedback_flash #good_pred{
+    background: rgba(255, 242, 0, 0.768);
+}.feedback_flash #bad_pred{
+    background: rgba(238, 0, 255, 0.768);
+} */

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Safari syntax */
+        :-webkit-full-screen {
+            background-color: rgb(255, 255, 255);
+        }
+        /* IE11 */
+        :-ms-fullscreen {
+            background-color: rgb(255, 255, 255);
+        }
+        /* Standard syntax */
+        :fullscreen {
+            background-color: rgb(255, 255, 255);
+        }
+
+        /* Style the button */
+        button {
+        padding: 20px;
+        font-size: 20px;
+        }
+    </style>
+    
+    <title>Home page</title>
+
+    <link rel="icon" type="image/x-icon" href="/resources/favicon_brain.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/style_test.css">
+    <link rel="stylesheet" href="styles/style_fullscreen.css">
+    <link rel="stylesheet" href="styles/instructions_style.css">
+    <link rel="stylesheet" href="styles/timer-styles.css">
+    <link rel="stylesheet" href="styles/button_styles.css">
+    <link rel="stylesheet" href="styles/post_task_styles.css">
+
+    <!-- External references -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+
+    <!-- Used internal scripts -->
+    <script src="client_scripts/utils.js" type="module"></script>
+    <script src="client_scripts/constants.js" type="module"></script>
+
+    <!-- Language -->
+    <script src="client_scripts/load_lang.js" type="module"></script>
+    <script src="languages/lang.en.js" ></script>
+    <script src="languages/lang.fr.js" ></script>
+    <script src="languages/lang.es.js" ></script>
+
+    <!-- Data saving tool -->
+    <script src="client_scripts/save_manager.js" type="module"></script>
+
+    <!-- Basic components -->
+    <script src="client_scripts/handle_exit_fullscreen.js" type="module"></script>
+    <script src="client_scripts/timer_object.js" type="module"></script>
+
+    <!-- Welcome to the task -->
+    <script src="client_scripts/welcome_and_go_fullscreen.js" type="module"></script>
+
+    <!-- Instructions components -->
+    <script src="client_scripts/instruction_page.js" type="module"></script>
+
+    <!-- Task components -->
+    <script src="client_scripts/trial_manager.js" type="module"></script>
+    <script src="client_scripts/flashes.js" type="module"></script>    
+    <script src="client_scripts/draw_trial_view.js" type="module"></script>
+    <script src="client_scripts/prompt_scripts.js" type="module"></script>
+    <script src="client_scripts/gauge_anim_class.js" type="module"></script>
+    <script src="client_scripts/backend.js" type="module"></script>
+    <script src="client_scripts/drawing_board_linedot.js" type="module"></script>
+    <script src="client_scripts/score_chart_better.js" type="module"></script>
+
+    <!-- Quitting the experiment -->
+    <script src="client_scripts/quit_task.js" type="module"></script>
+    
+    <!-- Post task prompting tools -->
+    <script src="client_scripts/post_task_questions.js" type="module"></script>
+
+    <!-- debugging tools -->
+    <script src="client_scripts/shortcuts.js" ></script>
+</head>
+
+<body>
+    <script> 
+        window.onload = function(){
+            // Record the starting timestamp
+            let firstRecordedTime = new Date();
+            firstRecordedTime = firstRecordedTime.toISOString()
+            window.saveManager.main_save_object.firstTime = firstRecordedTime;
+            
+            // Initialize the welcome page
+            window.drawWelcomePage();
+
+            // Allow subjects to skip steps (debug only)
+            if(window.CAN_SKIP_STEPS){
+                window.initSkipSectionOnEnter();
+            }
+        }
+    </script>
+    <!-- Will be filled after the language has loaded !     -->
+</body>
+</html>

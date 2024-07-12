@@ -1,0 +1,36 @@
+.promptButton {
+    position: absolute;
+    height: 30%;
+    aspect-ratio: 1/1;
+    background-color: rgb(247, 198, 134);
+    border-radius: 40%;
+    display: inline-block;
+    transform: translate(-50% ,-50%);
+    box-shadow: 10px 10px rgba(154, 200, 214, 0.385);
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+  }
+
+.promptButton:hover{
+    background-color: darkslategray;
+}
+
+.promptSymbol{
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    height: 70%;
+    aspect-ratio: 1/1;
+}
+.promptSymbol[dir="up"]{
+    transform: translate(-50% ,-50%);
+}
+.promptSymbol[dir="same"]{
+    transform: translate(-50% ,-50%);
+}
+.promptSymbol[dir="down"]{
+    transform: translate(-50% ,-50%) rotate(180deg) ;
+}

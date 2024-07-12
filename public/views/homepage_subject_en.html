@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Home page</title>
+        <link rel="stylesheet" href="styles/style_test.css">
+        <link rel="icon" type="image/x-icon" href="/resources/favicon_brain.png">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="good_feedback_flash" style="visibility:hidden;"></div>
+        <div class="bad_feedback_flash" style="visibility:hidden;"></div>
+
+        <div class="header_container">
+            <span class="title">
+                <div> <span style="font-size:50px; color:#280024; font-weight: bold ; font-family: 'Ink Free' ;"  > BEHAVIOURAL TEST </span> time ! </div>
+            </span>
+            <!-- <div class="button_container">
+                <a class="linkbutton" href="/fullscreen_master">
+                    <span style="color:rgb(255, 0, 0) ; font-family: fantasy;"> FULLSCREEN PAGE </span>
+                </a>
+            </div> -->
+            <div class="button_container" style="margin-right: 15%;">
+                <a class="linkbutton" href="/fr">
+                    <span style="color:white ; font-family: fantasy;"> FRENCH </span>
+                </a>
+                <a class="linkbutton" href="/e">
+                    <span style="color:white ; font-family: fantasy;"> E ? </span>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="main_text_container" style="position: relative;">
+            <p style="margin-bottom: 1cm; margin-top: 1cm;"> 
+                Welcome to our behavioural experiment ! 
+            </p>
+            <p style="margin-bottom: 1cm; margin-top: 1cm;"> 
+                <b> Before starting the experiment, please input an identifier (your name, a pseudonym, your favorite dish ...) : </b>
+            </p>
+            <form id="my-form" style="margin-right: 20%; margin-left: 20%;text-align: center;">
+                <input style="height:50px;width:450px;" type="text" id="fname" name="fname" placeholder="Your identifier here"><br>
+                <input style="margin:10%;height:100px;width:300px;font-size: 30px;font-family: system-ui;" type="submit" value="Proceed">
+            </form>
+            
+            <div style="position:absolute; bottom:3px;"> 
+                <p style="font-size:10px; color:#9ea0a9;">  If you encounter any issue, please contact us @ <a href="mailto: annicchiarico.come@gmail.com"> (Mail) </a></p>
+            </div>
+
+            <script>
+                function processForm(e) {
+                    if (e.preventDefault) e.preventDefault();
+
+                    /* do what you want with the form */
+                    var nameValue = document.getElementById("fname").value;
+                    if (nameValue==""){
+                        alert("Please input something");
+                        return false;
+                    } else {
+                        window.location.assign("/fullscreen_master?subjectId="+nameValue+"&lang=en");
+                    }
+                    // You must return false to prevent the default form behavior
+                    return false;
+                }
+
+                var form = document.getElementById('my-form');
+                if (form.attachEvent) {
+                    form.attachEvent("submit", processForm);
+                } else {
+                    form.addEventListener("submit", processForm);
+                }
+            </script>
+        </div>
+    </body>
+</html>
